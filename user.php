@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="ws_noth=device-ws_noth, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> //integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
 
     <title>Crud Operation</title>
 </head>
@@ -52,7 +52,7 @@ if (isset($_POST['submit'])) {
                 </div>
                 <div class="mb-3">
                     <label>Date of Joining</label>
-                    <input type="text" class="form-control" placeholder="Enter your Date of Joining" name="date of joining">
+                    <input type="date" class="form-control" placeholder="Enter your Date of Joining" name="date of joining">
                 </div>
                 <label>Address</label>
                 <input type="text" class="form-control" placeholder="Enter your Address" name="address">
@@ -70,9 +70,18 @@ if (isset($_POST['submit'])) {
                 <div>
                 <input type="radio"  name="gender" value="female">Female
                 </div>
-                <div class="mb-3">
+                <div class="from-group">
                     <label>Blood Group</label>
-                    <input type="text" class="form-control" placeholder="Enter your Blood Group" name="blood_group">
+                    <select name="blood_group" class="form-control"  >
+                        <option value=""name="blood_group">...Select Blood Group...</option>
+                        <option value="A+ve" name="A+ve">A+ve</option>
+                        <option value="A-ve" name="A-ve">A-ve</option>
+                        <option value="B+ve" name="B+ve">B+ve</option>
+                        <option value="B-ve" name="B-ve">B-ve</option>
+                        <option value="O+ve" name="O+ve">O+ve</option>
+                        <option value="O-ve" name="O-ve">O-ve</option>
+                        
+                    </select>
                 </div>
                 <div class="from-group">
                     <label>Department</label>
