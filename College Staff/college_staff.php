@@ -4,12 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="ws_noth=device-ws_noth, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+    
     <title>Registration</title>
 </head>
 
 <body>
+    
     <div class="contanier my-5">
+    <?php
+
+if(isset($status)){
+    echo $status;
+    echo '<br>', $test;
+}
+if(isset($msg)){
+    echo '<h2>'.$msg.'<h2>';
+}
+
+?>
         <form action="http://localhost:8080/ci3/college/savedata/" method="post">
             <div class="mb-3 mx-5">
                 <div class="mb-3">
@@ -29,7 +41,7 @@
                     <input type="number" class="form-control" name="phone_number">
                 </div>
                 <div class="mb-3">
-                   <label>GENDER</label>
+                   <label >GENDER</label>
                 </div>
                 
                     <input type="radio" name="gender" value="male">Male
@@ -65,6 +77,7 @@
                 <div>
                     
                     <input type="submit" class="mx-5"  name="submit" value="Register">
+                    <a href="http://localhost:8080/ci3/college/fetchdata/">View Record</a>
                 </div>
             </div>
         </form>
@@ -72,3 +85,5 @@
 </body>
 
 </html>
+
+
